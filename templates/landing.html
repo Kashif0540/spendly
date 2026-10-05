@@ -26,7 +26,7 @@
 
     <div class="hero-buttons">
         <a href="{{ url_for('register') }}" class="hero-btn">Create free account</a>
-        <a href="#" class="hero-btn">See how it works</a>
+        <button type="button" class="hero-btn" id="video-open">See how it works</button>
     </div>
 
     <div class="hero-dash">
@@ -99,4 +99,48 @@
     </div>
 </section>
 
+{# Placeholder video — replace data-src with the real embed URL #}
+<dialog class="video-modal" id="video-modal" aria-label="How Spendly works">
+    <div class="video-modal-box">
+        <button type="button" class="video-modal-close" id="video-close" aria-label="Close video">&times;</button>
+        <div class="video-modal-frame">
+            <iframe id="video-iframe"
+                    data-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+                    title="How Spendly works"
+                    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</dialog>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    (function () {
+        const modal = document.getElementById("video-modal");
+        const iframe = document.getElementById("video-iframe");
+
+        document.getElementById("video-open").addEventListener("click", function () {
+            iframe.src = iframe.dataset.src + "?autoplay=1&rel=0";
+            modal.showModal();
+            document.body.style.overflow = "hidden";
+        });
+
+        document.getElementById("video-close").addEventListener("click", function () {
+            modal.close();
+        });
+
+        // A click on the dialog itself (not its contents) means the backdrop was clicked
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) modal.close();
+        });
+
+        // Fires for every way of closing, including Esc. Clearing src stops playback.
+        modal.addEventListener("close", function () {
+            iframe.src = "";
+            document.body.style.overflow = "";
+        });
+    })();
+</script>
 {% endblock %}

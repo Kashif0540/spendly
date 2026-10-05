@@ -72,6 +72,12 @@
 
 .hero-btn:hover { background: #1a9e75; }
 
+button.hero-btn {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 /* Dashboard mockup */
 
 .hero-dash {
@@ -181,3 +187,61 @@
     .hero-dash-stats { grid-template-columns: 1fr; }
     .hero-dash-bars { padding: 1.25rem; }
 }
+
+/* ------------------------------------------------------------------ */
+/* Landing — Video modal                                               */
+/* ------------------------------------------------------------------ */
+
+.video-modal {
+    width: min(900px, 92vw);
+    max-width: none;
+    padding: 0;
+    border: none;
+    background: transparent;
+    overflow: visible;
+    margin: auto;
+}
+
+.video-modal::backdrop {
+    background: rgba(15, 15, 15, 0.75);
+}
+
+.video-modal-box {
+    position: relative;
+    background: #000;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.video-modal-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.video-modal-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.video-modal-close:hover { background: #e3f5ee; }
