@@ -1,0 +1,183 @@
+/* ------------------------------------------------------------------ */
+/* Landing — Hero                                                      */
+/* ------------------------------------------------------------------ */
+
+.hero-section {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #e3f5ee;
+    border: 1px solid #c9eadc;
+    color: #0f5a43;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.45rem 1.25rem;
+    border-radius: 999px;
+    margin-bottom: 2.75rem;
+}
+
+.hero-pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1a9e75;
+}
+
+.hero-heading {
+    font-family: var(--font-body);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.75rem;
+}
+
+.hero-heading-accent { color: #1a9e75; }
+
+.hero-lead {
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+    line-height: 1.7;
+    color: #4a4a4a;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 4.5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.hero-btn:hover { background: #1a9e75; }
+
+/* Dashboard mockup */
+
+.hero-dash {
+    background: #f6f6f6;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    padding: 1.5rem 1.75rem 1.75rem;
+    text-align: left;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.04);
+}
+
+.hero-dash-dots {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #f0727c; }
+.dot-yellow { background: #f4bb4c; }
+.dot-teal   { background: #6ad4c8; }
+
+.hero-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero-stat,
+.hero-dash-bars {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.4rem 1.6rem;
+}
+
+.hero-stat-label {
+    font-size: 1rem;
+    color: #777;
+}
+
+.hero-stat-value {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+.hero-stat-note {
+    font-size: 1rem;
+    color: #999;
+}
+
+.note-up   { color: #b3261e; }
+.note-good { color: #1a9e75; }
+
+.hero-dash-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.4rem 1.6rem 1.4rem 2.25rem;
+}
+
+.hero-bar-row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-bar-label {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.hero-bar-track {
+    height: 11px;
+    background: #efefef;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hero-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-food   { background: #f0a12b; }
+.bar-travel { background: #2f80e0; }
+.bar-bills  { background: #7b5fd6; }
+
+@media (max-width: 700px) {
+    .hero-section { padding: 3rem 1rem 3rem; }
+    .hero-dash { padding: 1.25rem; }
+    .hero-dash-stats { grid-template-columns: 1fr; }
+    .hero-dash-bars { padding: 1.25rem; }
+}
