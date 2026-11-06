@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-**Spendly** — a Flask + SQLite expense tracker built as a step-by-step course project (CampusX). Many pieces are intentionally stubbed and get implemented in numbered "Steps"; comments like `coming in Step 7` mark where each feature lands. Amounts are in rupees (₹).
+**Spendly** — a Flask + SQLite expense tracker built as a step-by-step course project (CampusX). Many pieces are intentionally stubbed and get implemented in numbered "Steps"; comments like `coming in Step 7` mark where each feature lands. Amounts are in rupees (Rs).
 
 ## Commands
 
